@@ -1,0 +1,20 @@
+[project]
+name = "openrelik-worker-uac"
+version = "0.1.0"
+description = "Process UAC (Unix-like Artifacts Collector) collections"
+readme = "README.md"
+authors = [{name = "Guzzy"}]
+requires-python = ">=3.12,<4.0"
+license = "Apache-2.0"
+dependencies = [
+    "celery[redis]>=5.6.0,<6.0.0",
+    "openrelik-worker-common~=0.18.0",
+    "openrelik-common~=0.18.1",
+]
+
+[dependency-groups]
+test = ["pytest", "pytest-cov>=5.0.0,<6"]
+
+[tool.uv]
+package = false
+default-groups = []
